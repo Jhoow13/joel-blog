@@ -17,7 +17,7 @@ gulp.task('serve', function () {
         baseDir: '_site/'
       }
     });
-    gulp.watch('_site/**/*.*', ['reload']);
+    gulp.watch('_site/**/*.*', ['build','reload']);
 });
 
 gulp.task('default', ['build', 'serve']);
