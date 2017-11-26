@@ -81,7 +81,7 @@ dd {
 }
 
 ul {
-  list-style: inside circle;
+  list-style: none;
   padding-left: 0;
 
   li {
@@ -180,7 +180,6 @@ pre {
   white-space: pre;
   white-space: pre-wrap;
   word-break: break-all;
-  // word-wrap: break-word;
   background-color: #f9f9f9;
 }
 

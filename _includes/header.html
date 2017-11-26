@@ -4,9 +4,34 @@
       {{site.title}}
     </a>
   </h1>
+  <p class="blog-initial-info">
+    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas, nemo deserunt! Debitis nemo, et quam cupiditate deserunt
+    dolores.
+  </p>
   <nav class="masthead-nav">
-    {% for page in site.pages %}
-    <a href="{{ page.url | prepend: site.baseurl }}">{{page.title}}</a>
-    {% endfor %}
+    <ul class="social-icons">
+      <li>
+        <a href="#"><img src="../src/imgs/icons/facebook.svg" alt=""></a>
+      </li>
+      <li>
+        <a href="#"><img src="../src/imgs/icons/twitter.svg" alt=""></a>
+      </li>
+      <li>
+        <a href="#"><img src="../src/imgs/icons/github.svg" alt=""></a>
+      </li>
+      <li>
+        <a href="#"><img src="../src/imgs/icons/linkedin.svg" alt=""></a>
+      </li>
+      <li>
+        <a href="#"><img src="../src/imgs/icons/outlook.svg" alt=""></a>
+      </li>
+    </ul>
+    <ul>
+      {% for page in site.pages %} {% if page.nav %}
+      <li>
+        <a href="{{ page.url | prepend: site.baseurl }}">{{page.title}}</a>
+      </li>
+      {% endif %} {% endfor %}
+    </ul>
   </nav>
 </header>
