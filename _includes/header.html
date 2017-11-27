@@ -39,11 +39,10 @@
       <button id="btnSearch">Pesquisar</button>
     </div>
 
-    <div id="myModal" class="modal">
-      <!-- Modal content -->
+    <div id="modalPesquisa" class="modal">
       <div class="modal-content">
         <div>
-          <input type="text" id="txtSearch" onkeyup="getPostList()">
+          <input type="text" id="txtSearch" autocomplete="off">
           <span class="close">&times;</span>
           <ul style="display:none" id="searchList"></ul>
         </div>

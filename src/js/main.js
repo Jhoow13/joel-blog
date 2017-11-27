@@ -1,76 +1,64 @@
-function myFunction() {
-  var input, filter, ul, li, a, i;
-  input = document.getElementById("myInput");
-  filter = input.value.toUpperCase();
-  ul = document.getElementById("myUL");
-  li = ul.getElementsByTagName("li");
-  for (i = 0; i < li.length; i++) {
-      a = li[i].getElementsByTagName("a")[0];
-      if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
-          li[i].style.display = "";
-      } else {
-          li[i].style.display = "none";
-
-      }
-  }
-}
+var searchInput = document.querySelector("#txtSearch");
+var modal = document.getElementById('modalPesquisa');
+var btn = document.getElementById("btnSearch");
+var span = document.querySelector(".close");
+var list = document.getElementById('searchList');
+var postList;
 
 function getPostList(){
-  var searchInput = document.querySelector("#txtSearch").value;
-  var list = document.getElementById('searchList');
-  list.style.display = 'block';
   var xhttp = new XMLHttpRequest();
-
-  function notFound(){
-    console.log('Sem resultados');
-  }
 
   xhttp.onreadystatechange = function(){
       if (this.readyState == 4 && this.status == 200){
-          var postList = JSON.parse(xhttp.response);
-
-          // for(i = 0; i < postList.length; i++){
-          //   if(postList[i].title.toLowerCase().indexOf(searchInput) > -1){
-          //     console.log(postList[i]);
-          //   }else{
-          //     console.log(postList[i].title.toLowerCase().indexOf(searchInput));
-          //     console.log("sem resultados");
-          //   }
-          // }
-
-          postList.forEach(function(post){
-          if(post.title.toLowerCase().indexOf(searchInput) > -1){
-              list.innerHTML =
-              `<li>${post.title}</li>`
-              return
-            }else{
-              `<li>Sem resultados :(</li>`
-            }
-          });
+          postList = JSON.parse(xhttp.response);
       }
   };
   xhttp.open("GET", "../../search.json");
   xhttp.send();
 }
 
-var modal = document.getElementById('myModal');
-var btn = document.getElementById("btnSearch");
-var span = document.getElementsByClassName("close")[0];
+searchInput.addEventListener('keyup', function(e){
+  postList.forEach(function(post){
+    console.log(post.title.toLowerCase().indexOf(searchInput.value));
+    if(post.title.toLowerCase().indexOf(searchInput.value) > -1){
+        list.innerHTML =
+        `<li>${post.title}</li>`
+        return
+      }else{
+        list.innerHTML = `<li>Sem resultados :(</li>`
+      }
+  });
+});
 
-btn.onclick = function() {
+function modalStatus(isOpen){
+  if(!isOpen){
     modal.style.display = "block";
     document.body.style.overflow = "hidden";
-}
-
-span.onclick = function() {
+    list.style.display = "block";
+    getPostList();
+  }else{
     modal.style.display = "none";
     document.body.style.overflow = "auto";
-
+  }
 }
 
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-        document.body.style.overflow = "auto";
-    }
+btn.addEventListener('click',function(e){
+  modalStatus(false);
+});
+
+span.addEventListener('click', function(e){
+  modalStatus(true)
+});
+
+window.onclick = function(event){
+  if(event.target == modal){
+    modalStatus(true);
+  }
 }
+
+document.addEventListener('keyup', function(e){
+  if(e.keyCode == '27'){
+    modal.style.display = "none";
+    document.body.style.overflow = "auto";
+  };
+})
