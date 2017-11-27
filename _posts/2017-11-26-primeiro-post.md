@@ -1,12 +1,17 @@
 ---
 layout: post
 title:  "Hello world do blog"
+comments: true
 date:   2017-11-26 14:29:00 -0200
 categories: inicio blog
 ---
 
 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, sit corporis distinctio consequuntur quasi, quos numquam quam quae facilis, aut doloribus nemo illum velit? Fuga ad culpa explicabo aliquid vel.
-Soluta consequatur quaerat quod nam omnis ut repellat neque illo quidem, suscipit numquam nemo minima excepturi. Eos soluta eligendi asperiores temporibus! Molestias nisi esse eligendi temporibus maiores aliquid non cum?
+
+{%highlight JavaScript%}
+  let array = [1,2,3,4,5];
+  array.map(item => console.log(`Número ${item}`));
+{%endhighlight%}
 
 Reiciendis earum atque dignissimos, sequi quos ut ipsa quasi suscipit illo asperiores repudiandae minima totam dolorem nam delectus aliquam praesentium quam eos a nesciunt amet molestiae? Quis veniam molestiae accusantium?
 Ab asperiores quos, natus hic, repudiandae fugiat ad velit sapiente reprehenderit unde ut. Doloremque provident velit necessitatibus iste maxime nostrum labore? Adipisci aliquid labore ipsam, provident error saepe officiis veritatis?
