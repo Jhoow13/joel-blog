@@ -34,4 +34,19 @@
       {% endif %} {% endfor %}
     </ul>
   </nav>
+
+    <div class="input-group">
+      <button id="btnSearch">Pesquisar</button>
+    </div>
+
+    <div id="myModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <div>
+          <input type="text" id="txtSearch" onkeyup="getPostList()">
+          <span class="close">&times;</span>
+          <ul style="display:none" id="searchList"></ul>
+        </div>
+      </div>
+    </div>
 </header>

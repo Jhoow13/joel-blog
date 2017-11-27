@@ -8,12 +8,14 @@ layout: default
     {{ page.title }}
   </h1>
   <div class="post-date">
-    <time>{{ page.date | date_to_string }}</time>
-    <span class="reading-time"> - {{minutesText}} </span>
+    <time>{{ page.date | date_to_string }}</time><br>
+    <span class="reading-time"> Tempo de leitura: {{minutesText}} </span>
   </div>
 
   {{ content }}
 
- {% include disqus-comments.html %}
+  {% if page.comments %}
+    {% include disqus-comments.html %}
+  {% endif %}
 
 </article>
