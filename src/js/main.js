@@ -17,17 +17,25 @@ function getPostList(){
   xhttp.send();
 }
 
-searchInput.addEventListener('keyup', function(e){
+searchInput.addEventListener('input', function(e){
+  var listItems = "";
+  var hasItems = false;
+
   postList.forEach(function(post){
-    console.log(post.title.toLowerCase().indexOf(searchInput.value));
-    if(post.title.toLowerCase().indexOf(searchInput.value) > -1){
-        list.innerHTML =
-        `<li>${post.title}</li>`
-        return
-      }else{
-        list.innerHTML = `<li>Sem resultados :(</li>`
-      }
+    if(post.title.toLowerCase().indexOf(searchInput.value.toLowerCase()) > -1){
+      listItems += `<li><a href="${post.url}">${post.title}</a></li>`;
+      hasItems = true;
+    }
   });
+
+  if(hasItems){
+    list.innerHTML = listItems;
+  }else{
+    list.innerHTML = `<li>Sem resultados :(</li>`
+  }
+
+  if(!searchInput.value){list.innerHTML = ""};
+
 });
 
 function modalStatus(isOpen){
