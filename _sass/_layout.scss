@@ -6,6 +6,12 @@
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
+  padding: 1.5em 4.5em;
+
+  @media (min-width: 1024px) {
+    // margin: 3em 6em;
+  }
+
 }
 
 .masthead {
@@ -15,7 +21,6 @@
   box-shadow: 1px 3px 10px rgba(0, 0, 0, .5);
   text-align: center;
   padding: 50px 0;
-  margin-bottom: 20px;
   &-title {
     font-weight: 300;
 
@@ -90,6 +95,23 @@
 }
 
 .list {
+  &-item{
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 2em;
+    a:not(:first-child){
+      &:hover,
+      &:focus{
+        color: #333;
+      }
+    }
+  }
+  p.no-posts{
+    width: 75%;
+    text-align: center;
+  }
+  p{
+    text-align: justify;
+  }
   &-post-title {
     margin-bottom: .25rem;
 
