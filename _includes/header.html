@@ -11,19 +11,16 @@
   <nav class="masthead-nav">
     <ul class="social-icons">
       <li>
-        <a href="#"><img src="../src/imgs/icons/facebook.svg" alt=""></a>
+        <a href="{{site.twitter}}"><img src="../src/imgs/icons/twitter.svg" alt=""></a>
       </li>
       <li>
-        <a href="#"><img src="../src/imgs/icons/twitter.svg" alt=""></a>
+        <a href="{{site.github}}"><img src="../src/imgs/icons/github.svg" alt=""></a>
       </li>
       <li>
-        <a href="#"><img src="../src/imgs/icons/github.svg" alt=""></a>
+        <a href="{{site.linkedin}}"><img src="../src/imgs/icons/linkedin.svg" alt=""></a>
       </li>
       <li>
-        <a href="#"><img src="../src/imgs/icons/linkedin.svg" alt=""></a>
-      </li>
-      <li>
-        <a href="#"><img src="../src/imgs/icons/outlook.svg" alt=""></a>
+        <a href="mailto:{{site.email}}"><img src="../src/imgs/icons/outlook.svg" alt=""></a>
       </li>
     </ul>
     <ul>
@@ -35,9 +32,11 @@
     </ul>
   </nav>
 
-    <div class="input-group">
-      <button id="btnSearch">Pesquisar</button>
-    </div>
+  <button id="btnSearch" class="button-search">
+    <img src="../src/imgs/icons/search.svg">
+    <span>Pesquisar</span>
+  </button>
+
 
     <div id="modalPesquisa" class="modal">
       <div class="modal-content">
