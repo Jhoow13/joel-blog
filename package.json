@@ -4,7 +4,8 @@
   "description": "Blog simples para tecnologias e diversos",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "bundle exec jekyll serve"
   },
   "repository": {
     "type": "git",
