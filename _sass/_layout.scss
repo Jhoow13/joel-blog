@@ -15,7 +15,7 @@
   background-color: #ccc;
   box-shadow: 1px 3px 10px rgba(0, 0, 0, .5);
   text-align: center;
-  padding: 50px 0;
+  padding: 25px 0;
   &-title {
     font-weight: 300;
 
@@ -29,8 +29,10 @@
   }
 
   p.blog-initial-info{
-    width: 50%;
+    width: 60%;
     margin: 0 auto;
+    font-size: 1.5em;
+    line-height: 1;
   }
 
   .masthead-nav {
