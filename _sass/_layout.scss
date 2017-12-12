@@ -7,11 +7,6 @@
   flex-flow: row wrap;
   justify-content: center;
   padding: 1.5em 4.5em;
-
-  @media (min-width: 1024px) {
-    // margin: 3em 6em;
-  }
-
 }
 
 .masthead {
@@ -40,17 +35,13 @@
 
   .masthead-nav {
     a {
-      color: #aaa;
+      color: rgba(51,51,51,.6);
       font-weight: 300;
       text-transform: lowercase;
-      -webkit-transition: all .2s ease;
-         -moz-transition: all .2s ease;
-              transition: all .2s ease;
-
+      transition: all .2s ease;
       &:hover,
       &:focus {
-        color: #333;
-        text-decoration: none;
+        color: rgb(51,51,51);
       }
       + a {
         margin-left: .25rem;
@@ -61,7 +52,7 @@
       margin: 0;
       &.social-icons li a img{
           width: 25px;
-          color:black;
+          color:#000;
           margin: 15px 10px 0;
           opacity: .4;
           transition: opacity ease .3s;
@@ -74,6 +65,31 @@
       }
     }
   }
+
+  .button-search{
+      background-color: #000;
+      opacity: .4;
+      border: none;
+      color: #fff;
+      padding: 10px;
+      font-size: 15px;
+      cursor: pointer;
+      transition: opacity ease .3s;
+      &:hover{
+        opacity: 1;
+      }
+
+      span{
+        color: #ccc;
+      }
+
+      img{
+        width: 20px;
+        display: inline-block;
+        vertical-align: middle;
+      }
+  }
+
 
 }
 
@@ -152,7 +168,10 @@
   color: #ffffff;
 
   .modal-content {
-    background-color:transparent;
+    div{
+      position: relative;
+    }
+    background-color: rgba(0, 0, 0, .5);
     margin: auto;
     padding: 20px;
     border: 1px solid #fff;
@@ -160,27 +179,40 @@
 
     input{
       border: none;
+      border-radius: 0px;
       background: none;
       outline: none;
       color: #fff;
       border-bottom: 1px solid #fff;
+      padding-bottom: 5px;
+      font-size: 20px;
       width: 100%;
     }
 
     .close {
       position: absolute;
-      top: 110px;
-      right: 160px;
-      float: right;
-      font-size: 28px;
+      display: block;
+      top: 0;
+      right: 0;
+      font-size: 25px;
       font-weight: bold;
     }
 
-    .close:hover,
-    .close:focus {
-      color: #000;
+    &:hover,
+    &:focus {
       text-decoration: none;
       cursor: pointer;
+    }
+
+    ul{
+      li{
+        a{
+          color: #fff;
+          &:hover{
+            text-decoration: underline;
+          }
+        }
+      }
     }
   }
 }
