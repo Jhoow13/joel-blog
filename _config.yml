@@ -4,8 +4,10 @@ description: >- # this means to ignore newlines until "baseurl:"
   Blog criado com o objetivo de ampliar os meus conhecimentos e criar uns tutoriais.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jhoow13z
-github_username:  jhoow13
+twitter: https://twitter.com/jhoow13z
+github:  https://github.com/jhoow13
+linkedin: https://www.linkedin.com/in/joelcsilva/
+email: joelcsilva@outlook.com
 
 # Build settings
 markdown: kramdown
