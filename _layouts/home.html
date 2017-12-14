@@ -1,12 +1,35 @@
 ---
 layout: default
 ---
+<article class="about">
+  <section>
+    <img src="https://avatars2.githubusercontent.com/u/18129245?v=4" alt="Foto do dono do blog :)">
+    <h1 class="about-title">{{page.title}}</h1>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione nulla id animi accusantium suscipit atque cumque, optio repellendus nisi vel tenetur provident, et, hic maiores amet corporis asperiores voluptatem aperiam!
+    </p>
+    <h2>O que eu sei</h2>
+    <ul>
+      <li>item 1</li>
+      <li>item 2</li>
+      <li>item 3</li>
+    </ul>
+  </section>
 
+  <section>
+    <h1 class="section-title">Projetos</h1>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+    </p>
+  </section>
+</article>
+
+Ultimos posts
 <div class="content list">
   {% if site.posts.size == 0 %}
     <p class="no-posts">Ops, atualmente estamos sem publicações. Volte mais tarde :)</p>
   {% else %}
-    {% for post in site.posts %}
+    {% for post in site.posts limit:2 %}
       <div class="list-item">
         <h2 class="list-post-title">
           <a href="{{ post.url }}">{{ post.title | prepend: site.baseurl }}</a>
@@ -26,3 +49,5 @@ layout: default
     {% endfor %}
   {% endif %}
 </div>
+
+<a href="{{ site.url }}/blog">Veja todos os posts</a>
