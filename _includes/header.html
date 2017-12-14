@@ -1,26 +1,34 @@
 <header class="masthead">
+  <a href="{{ site.baseurl }}/">
+    <img class="logo" src="../src/imgs/icons/logo.png" alt="Logo do site abre e fecha chaves">
+  </a>
   <h1 class="masthead-title">
-    <a href="{{ site.baseurl }}/">
       {{site.title}}
-    </a>
   </h1>
   <p class="blog-initial-info">
     Desenvolvedor front end.<br>
-    Compartilhar e expandir meus conhecimentos são meus objetivos com esse blog.
   </p>
   <nav class="masthead-nav">
     <ul class="social-icons">
       <li>
-        <a href="{{site.twitter}}" target="_blank" rel="noopener noreferrer"><img src="../src/imgs/icons/twitter.svg" alt=""></a>
+        <a href="{{site.twitter}}" target="_blank" rel="noopener noreferrer">
+          <img src="../src/imgs/icons/twitter.svg" alt="Icone com link twitter">
+      </a>
       </li>
       <li>
-        <a href="{{site.github}}" target="_blank" rel="noopener noreferrer"><img src="../src/imgs/icons/github.svg" alt=""></a>
+        <a href="{{site.github}}" target="_blank" rel="noopener noreferrer">
+          <img src="../src/imgs/icons/github.svg" alt="Icone com link github">
+      </a>
       </li>
       <li>
-        <a href="{{site.linkedin}}" target="_blank" rel="noopener noreferrer"><img src="../src/imgs/icons/linkedin.svg" alt=""></a>
+        <a href="{{site.linkedin}}" target="_blank" rel="noopener noreferrer">
+          <img src="../src/imgs/icons/linkedin.svg" alt="Icone com link linkedin">
+      </a>
       </li>
       <li>
-        <a href="mailto:{{site.email}}" target="_blank" rel="noopener noreferrer"><img src="../src/imgs/icons/outlook.svg" alt=""></a>
+        <a href="mailto:{{site.email}}" target="_blank" rel="noopener noreferrer">
+          <img src="../src/imgs/icons/outlook.svg" alt="Icone com link outlook">
+      </a>
       </li>
     </ul>
     <ul>
@@ -30,21 +38,21 @@
       </li>
       {% endif %} {% endfor %}
     </ul>
+    <button id="btnSearch" class="button-search">
+      <img src="../src/imgs/icons/search.svg">
+      <span>Pesquisar</span>
+    </button>
   </nav>
-
-  <button id="btnSearch" class="button-search">
-    <img src="../src/imgs/icons/search.svg">
-    <span>Pesquisar</span>
-  </button>
-
-
-    <div id="modalPesquisa" class="modal">
-      <div class="modal-content">
-        <div>
-          <input type="text" id="txtSearch" autocomplete="off">
-          <span class="close">&times;</span>
-          <ul style="display:none" id="searchList"></ul>
-        </div>
-      </div>
-    </div>
 </header>
+
+<header class="smaller"></header>
+
+<div id="modalPesquisa" class="modal">
+  <div class="modal-content">
+    <div>
+      <input type="text" id="txtSearch" autocomplete="off">
+      <span class="close">&times;</span>
+      <ul style="display:none" id="searchList"></ul>
+    </div>
+  </div>
+</div>

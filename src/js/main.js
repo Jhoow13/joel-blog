@@ -3,6 +3,7 @@ var modal = document.getElementById('modalPesquisa');
 var btn = document.getElementById("btnSearch");
 var span = document.querySelector(".close");
 var list = document.getElementById('searchList');
+var header = document.querySelector(".smaller");
 var postList;
 
 function getPostList(){
@@ -49,6 +50,16 @@ function modalStatus(isOpen){
     document.body.style.overflow = "auto";
   }
 }
+
+function resizeHeader(){
+  if (window.pageYOffset > 332){
+    header.classList.add('top0');
+  }else{
+    header.classList.remove('top0');
+  }
+}
+
+window.addEventListener('scroll', resizeHeader)
 
 btn.addEventListener('click',function(e){
   modalStatus(false);
