@@ -1,8 +1,8 @@
-var searchInput = document.querySelector("#txtSearch");
+var searchInput = document.getElementById("txtSearch");
 var modal = document.getElementById('modalPesquisa');
-var btn = document.getElementById("btnSearch");
-var span = document.querySelector(".close");
 var list = document.getElementById('searchList');
+var btn = document.querySelector(".btnSearch");
+var span = document.querySelector(".close");
 var header = document.querySelector(".smaller");
 var postList;
 
@@ -61,9 +61,9 @@ function resizeHeader(){
 
 window.addEventListener('scroll', resizeHeader)
 
-btn.addEventListener('click',function(e){
+function searchPosts(){
   modalStatus(false);
-});
+};
 
 span.addEventListener('click', function(e){
   modalStatus(true)
