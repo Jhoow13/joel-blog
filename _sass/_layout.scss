@@ -19,6 +19,7 @@
   img.logo{
     margin: 0 auto;
     display: inline-block;
+    transition: animation ease .8s;
     &:hover{
       animation: shake .3s;
     }
@@ -60,7 +61,11 @@
 
     ul.social-icons{
       margin: 0;
-      li a svg{
+      border:none;
+      li a{
+        border: none;
+      }
+      svg{
         fill: #fff;
         height: 25px;
         width: 25px;
@@ -251,9 +256,27 @@
   }
 }
 
+@media screen and (max-width: 768px){
+  nav a{
+    opacity: 1!important;
+    border-bottom: 1px solid;
+  }
+}
+
 @media screen and (max-width: 550px){
-  .masthead p.blog-initial-info{
-    font-size: 1em;
+  .masthead{
+    section{
+      margin-left: 5px;
+    }
+    .masthead-nav{
+      ul:first-child{
+        display: flex;
+      }
+    }
+    p.blog-initial-info{
+      font-size: 1em;
+      width: 100%;
+    }
   }
   .smaller span{
     font-size: 1.2em;

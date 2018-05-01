@@ -5,7 +5,7 @@ layout: default
 <p>
   Ultimos posts
 </p>
-<div class="content list">
+<div class="content list" id="infinitePostList">
   {% if site.posts.size == 0 %}
     <p class="no-posts">Ops, atualmente estamos sem publicações. Volte mais tarde :)</p>
   {% else %}
@@ -31,3 +31,7 @@ layout: default
 </div>
 
 <a href="{{ site.url }}/blog">Veja todos os posts</a>
+
+<div id="infiniteList">
+
+</div>
