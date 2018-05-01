@@ -2,13 +2,14 @@
 layout: default
 ---
 
-<p>
-  Ultimos posts
-</p>
-<div class="content list" id="infinitePostList">
+<div class="content list">
   {% if site.posts.size == 0 %}
-    <p class="no-posts">Ops, atualmente estamos sem publicações. Volte mais tarde :)</p>
+  <p class="no-posts">Ops, atualmente não existem publicações.</p>
+  <p class="no-posts">Volte mais tarde :)</p>
   {% else %}
+        <p>
+          Ultimos posts
+        </p>
     {% for post in site.posts limit:3 %}
       <div class="list-item">
         <h2 class="list-post-title">
@@ -27,11 +28,9 @@ layout: default
 
       </div>
     {% endfor %}
+    <a href="{{ site.url }}/blog">Veja todos os posts</a>
   {% endif %}
 </div>
 
-<a href="{{ site.url }}/blog">Veja todos os posts</a>
-
-<div id="infiniteList">
 
 </div>
