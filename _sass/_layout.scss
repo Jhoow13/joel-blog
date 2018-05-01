@@ -181,6 +181,10 @@
     font-size: .75rem;
     text-transform: uppercase;
   }
+  .all-posts{
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .projects-list {
@@ -250,6 +254,13 @@
 }
 
 .about{
+  img.eu{
+    float: left;
+    margin: 15px;
+  }
+  p{
+    text-align: justify;
+  }
   &-title{
     margin-bottom: .25rem;
   }
