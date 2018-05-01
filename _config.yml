@@ -1,19 +1,19 @@
 title: Joel Silva
 email: joelcsilva@outlook.com
-description: >- # this means to ignore newlines until "baseurl:"
-  Blog criado com o objetivo de ampliar os meus conhecimentos e criar uns tutoriais.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+description:  Blog criado com o objetivo de ampliar os meus conhecimentos e criar uns tutoriais.
+baseurl: ""
+url: "https://joelcsilva.com.br"
 twitter: https://twitter.com/jhoow13z
 github:  https://github.com/jhoow13
 linkedin: https://www.linkedin.com/in/joelcsilva/
 email: joelcsilva@outlook.com
+sass:
+  style: compressed
+timezone: default
 
 # Build settings
 markdown: kramdown
 permalink: /:title
-theme: minima
-plugins:
-  - jekyll-feed
+highlighter: rouge
 
-exclude: ['package.json', 'node_modules', 'gulpfile.js']
+exclude: ['package.json', 'package-lock.json', 'node_modules', 'gulpfile.js','README.md', 'LICENSE.md']
