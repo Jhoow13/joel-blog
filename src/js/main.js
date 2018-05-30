@@ -5,6 +5,8 @@ var btn = document.querySelector(".btnSearch");
 var span = document.querySelector(".close");
 var header = document.querySelector(".smaller");
 var postList;
+var skillLista = document.querySelectorAll('.skills-lista li');
+var textoDetalhe = document.querySelector('ul.skills-detalhe');
 
 function getPostList(){
   var xhttp = new XMLHttpRequest();
@@ -81,3 +83,22 @@ document.addEventListener('keyup', function(e){
     document.body.style.overflow = "auto";
   };
 })
+
+
+var skills = [
+  {'lista': ['HTML5', 'Template Engine (Jade, PUG)','Semântica']},
+  {'lista': ['Layout', 'Web Design Responsivo', 'Arquiteturas CSS', 'Pré Processadores', 'Frameworks CSS' ]},
+  {'lista': ['Sintaxe (ES5, Jquery, ES6)', 'DOM', 'Task Runners', 'NPM', 'Task Runners']},
+  {'lista': ['Versionamento (GIT)', 'Linux', 'Terminal/Shell', 'HTTP/HTTPS']}
+];
+
+skillLista.forEach(function(itemLista, index){
+  itemLista.addEventListener('click', function(e){
+    textoDetalhe.innerHTML = "";
+    skills[index].lista.forEach(function(item){
+      var desc = document.createElement('li');
+      desc.appendChild(document.createTextNode(item));
+      textoDetalhe.appendChild(desc);
+    });
+  })
+});

@@ -26,6 +26,7 @@ html {
 body {
   color: #515151;
   background-color: #fff;
+  text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
 }
@@ -82,21 +83,6 @@ dd {
 
 ul {
   list-style: none;
-  padding-left: 0;
-
-  li {
-    margin-bottom: .25rem;
-  }
-
-  ul,
-  ol {
-    margin-top: .25rem;
-    margin-bottom: .5rem;
-  }
-}
-
-ol {
-  list-style: inside decimal;
   padding-left: 0;
 
   li {
