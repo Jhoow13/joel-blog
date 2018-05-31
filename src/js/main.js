@@ -87,8 +87,8 @@ document.addEventListener('keyup', function(e){
 
 var skills = [
   {'lista': ['HTML5', 'Template Engine (Jade, PUG)','Semântica']},
-  {'lista': ['Layout', 'Web Design Responsivo', 'Arquiteturas CSS', 'Pré Processadores', 'Frameworks CSS' ]},
-  {'lista': ['Sintaxe (ES5, Jquery, ES6)', 'DOM', 'Task Runners', 'NPM', 'Task Runners']},
+  {'lista': ['Layout', 'Web Design Responsivo', 'Arquiteturas CSS (BEM)', 'Pré Processadores (SASS, LESS)', 'Frameworks CSS (Bootstrap)' ]},
+  {'lista': ['Sintaxe (ES5, Jquery, ES6)', 'DOM', 'Task Runners', 'NPM']},
   {'lista': ['Versionamento (GIT)', 'Linux', 'Terminal/Shell', 'HTTP/HTTPS']}
 ];
 
