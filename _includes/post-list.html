@@ -3,7 +3,7 @@
   <p class="no-posts">Ops, atualmente não existem publicações.</p>
   <p class="no-posts">Volte mais tarde :)</p>
   {% else %}
-    {% for post in site.posts limit:3 %}
+    {% for post in site.posts reversed limit:3 %}
       <div class="list-item">
         <h2 class="list-post-title">
           <a href="{{ post.url }}">{{ post.title | prepend: site.baseurl }}</a>
