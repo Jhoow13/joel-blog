@@ -1,7 +1,8 @@
 .container {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .masthead {
@@ -149,6 +150,7 @@
 }
 
 .list {
+  padding-top: 30px;
   &-item{
     border-bottom: 1px solid #ccc;
     margin-bottom: 2em;
@@ -254,8 +256,7 @@
 }
 
 .about{
-  display: flex;
-  flex-wrap: wrap;
+  padding: 10px;
   p{
     text-align: justify;
   }
@@ -264,12 +265,11 @@
   }
 
   .row{
-    flex-direction: row;
+    display: block;
+    width: 100%;
   }
   .column{
-    flex-flow: column wrap;
-    flex-wrap: wrap;
-    width: 50%;
+    display: inline-block;
   }
   .skills{
     &-lista{
@@ -293,17 +293,31 @@
   }
 }
 
-@media screen and (min-width: 992px){
+.full-column{
+  width: 100%;
+}
+@media screen and (min-width: 768px){
   .container{
-    padding: 1.5em 10em;
+    width: 750px;
+  }
+  .column{
+    width: 50%;
+    float: left;
   }
 }
 
-@media screen and (max-width: 991px){
+@media screen and (min-width: 992px){
   .container{
-    padding: 1.2em 5em;
+    width: 970px;
   }
 }
+
+@media screen and (min-width: 1200px){
+  .container{
+    width: 1170px;
+  }
+}
+
 
 @media screen and (max-width: 768px){
   nav a{
