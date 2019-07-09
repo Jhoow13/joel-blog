@@ -24,8 +24,8 @@
   },
   "homepage": "https://github.com/Jhoow13/joel-blog#readme",
   "devDependencies": {
-    "browser-sync": "^2.18.13",
-    "gulp": "^3.9.1",
-    "gulp-shell": "^0.6.3"
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
+    "gulp-shell": "^0.7.1"
   }
 }
