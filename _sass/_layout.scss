@@ -1,6 +1,7 @@
 .container {
   padding-right: 15px;
   padding-left: 15px;
+  padding-top: 30px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -150,7 +151,6 @@
 }
 
 .list {
-  padding-top: 30px;
   &-item{
     border-bottom: 1px solid #ccc;
     margin-bottom: 2em;
@@ -256,7 +256,6 @@
 }
 
 .about{
-  padding: 10px;
   p{
     text-align: justify;
   }
@@ -296,6 +295,7 @@
 .full-column{
   width: 100%;
 }
+
 @media screen and (min-width: 768px){
   .container{
     width: 750px;
@@ -309,12 +309,6 @@
 @media screen and (min-width: 992px){
   .container{
     width: 970px;
-  }
-}
-
-@media screen and (min-width: 1200px){
-  .container{
-    width: 1170px;
   }
 }
 
