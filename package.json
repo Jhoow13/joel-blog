@@ -4,8 +4,9 @@
   "description": "Portfolio simples para projetos pessoais",
   "main": "index.js",
   "scripts": {
-    "start": "npm run gulp dev",
-    "build": "npm run build"
+    "start": "npm run gulp",
+    "build": "npm run gulp prod",
+    "gulp": "gulp"
   },
   "repository": {
     "type": "git",

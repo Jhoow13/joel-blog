@@ -18,7 +18,7 @@ var files = {
       'src/sass/all.scss'
     ],
     jsFiles:[
-      'src/js/main.js'
+      'src/js/*.js'
     ],
     imgFiles:[
       'src/img/**/*.*',
