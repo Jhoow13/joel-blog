@@ -1,19 +1,11 @@
-<!DOCTYPE html>
-html(lang="pt-BR")
-	head
-		meta(charset="UTF-8")
-		meta(name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1, minimum-scale=1")
-		meta(http-equiv="x-ua-compatible" content="ie=edge")
+include pug/partials/head
 
-		title Joel Portfolio
-		link(rel="icon" type="image/x-icon" href="img/icons/favicon.png")
+body
+  noscript
+  iframe(src='https://www.googletagmanager.com/ns.html?id=GTM-P4H3734' height='0' width='0' style='display:none;visibility:hidden')
 
-	body
-		include pug/components/navbar
-		include pug/teste
+  include pug/partials/navbar
+  include pug/partials/projetos
 
-		//- Insert stylesheets here
-		link(rel="stylesheet" href="css/style.min.css")
-
-		//- Insert scripts here
-		script(src="js/main.min.js")
+  link(rel="stylesheet" href="css/style.min.css")
+  script(src="js/main.min.js")
