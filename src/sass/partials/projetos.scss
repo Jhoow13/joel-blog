@@ -1,24 +1,66 @@
-.projetos{
-  display: grid;
-  grid-template-columns: 250px;
-  grid-gap: 10px;
-  justify-content: center;
-  font-family: Sans-serif;
-  height: 100%;
-  margin-top: 50px;
-
-  div {
-    background-color: #283149;
-    height: 250px;
-    width: 250px;
+section.projetos{
+  padding: 15px;
+  h1{
+    text-align: center;
+    font-weight: 400;
+    font-size: 25px;
   }
+  .lista-projetos{
+    display: grid;
+    grid-template-columns: 300px;
+    grid-gap: 10px;
+    justify-content: center;
+    font-family: Sans-serif;
+    height: 100%;
+    margin-top: 50px;
 
-  @media (min-width: 991px){
-    grid-template-columns: 250px 250px;
+    .item-projeto {
+      position: relative;
+    }
+
+    .overlay-text {
+      background: rgba(0, 0, 0, 0.5);
+      bottom: 4px;
+      opacity:1;
+      padding: 20px;
+      position: absolute;
+      transition: .5s ease;
+      width: 100%;
+      a{
+        color: #f1f1f1;
+        display: block;
+        font-family: 'Montserrat';
+        font-size: 20px;
+        text-align: center;
+        text-decoration: none;
+        &:hover,&:focus, &:active{
+          color: #f1f1f1;
+        }
+      }
+    }
+
+    .img-projetos{
+      width: 100%;
+      max-width: 400px;
+      height: auto;
+    }
+
+    @media (min-width: 768px){
+      grid-template-columns: 300px 300px;
+    }
+
+    @media screen and (min-width: 992px){
+      .overlay-text{
+        opacity: 0;
+      }
+      .item-projeto:hover .overlay-text {
+        opacity: 1;
+      }
+    }
+
+    @media (min-width: 1200px){
+      grid-template-columns: 400px 400px 400px;
+
+    }
   }
-
-  @media (min-width: 1200px){
-    grid-template-columns: 250px 250px 250px;
-  }
-
 }
