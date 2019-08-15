@@ -38,13 +38,6 @@ section.projetos{
         }
       }
     }
-
-    .img-projetos{
-      width: 100%;
-      max-width: 400px;
-      height: auto;
-    }
-
     @media (min-width: 768px){
       grid-template-columns: 300px 300px;
     }
