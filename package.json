@@ -1,18 +1,19 @@
 {
   "name": "joel-blog",
   "version": "1.0.0",
-  "description": "Blog simples para tecnologias e diversos",
+  "description": "Portfolio simples para projetos pessoais",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "bundle exec jekyll s -q"
+    "start": "npm run gulp",
+    "build": "npm run gulp prod",
+    "gulp": "gulp"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Jhoow13/joel-blog.git"
   },
   "keywords": [
-    "blog",
+    "portfolio",
     "tecnologia",
     "front",
     "desenvolvimento"
@@ -25,7 +26,15 @@
   "homepage": "https://github.com/Jhoow13/joel-blog#readme",
   "devDependencies": {
     "browser-sync": "^2.26.7",
-    "gulp": "^4.0.2",
-    "gulp-shell": "^0.7.1"
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^6.1.0",
+    "gulp-clean": "^0.4.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssnano": "^2.1.3",
+    "gulp-imagemin": "^6.0.0",
+    "gulp-pug": "^4.0.1",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-uglify": "^3.0.2"
   }
 }

@@ -1,0 +1,32 @@
+nav{
+  background-image: url('../img/top-bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 15px;
+  color: #ffffff;
+
+  a{
+    opacity: .6;
+    transition: opacity .2s ease;
+    &:hover{
+      opacity: 1;
+    }
+  }
+  svg{
+    fill: #ffffff;
+    margin: 0 15px;
+  }
+
+  h1{
+    font-size: 36px;
+  }
+
+  p{
+    font-size: 20px;
+    margin: 15px 0;
+  }
+}
