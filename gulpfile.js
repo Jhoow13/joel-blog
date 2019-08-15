@@ -12,7 +12,8 @@ var gulp = require('gulp'),
 
 var files = {
     pugFiles:[
-      'src/index.pug'
+      'src/index.pug',
+      'src/404.pug'
     ],
     scssFiles:[
       'src/sass/all.scss'
